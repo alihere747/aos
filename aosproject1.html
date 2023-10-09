@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>AOS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-image: url(./bg\ \(3\).jpg);
+            background-attachment: fixed;
+        }
+
+        .main_section {
+            height: max-content;
+            width: 100%;
+            background-color: rgba(84, 98, 179, 0.71);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .logo_div {
+            height: 70px;
+            width: 70px;
+            /* border: 2px solid red; */
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            background-image: url(./images/github_octocat.png);
+            background-size: cover;
+            background-position: center;
+        }
+
+
+
+        .sec1 {
+            height: 100vh;
+            width: 50%;
+            /* border: 4px solid wheat; */
+            border-bottom: 1px solid white;
+            padding-bottom: 100px;
+        }
+
+        .heading1_sec1 {
+            color: rgb(49, 56, 96);
+            text-align: center;
+            margin-top: 200px;
+            font-size: 50px;
+        }
+
+        .heading2_sec1 {
+            color: white;
+            text-align: center;
+            font-weight: 100;
+            margin-top: 30px;
+        }
+
+        .para1_sec1 {
+            color: white;
+            text-align: center;
+            margin-top: 130px;
+        }
+
+        .para2_sec1 {
+            color: rgb(255, 64, 129);
+            font-size: xx-large;
+            margin-left: 48%;
+            margin-top: 50px;
+        }
+
+
+
+
+        .fade1 {
+            color: white;
+            text-align: center;
+            font-weight: 100;
+            margin-top: 20px;
+        }
+
+
+
+
+        .sec2 {
+            height: 100%;
+            width: 80%;
+            /* border: 2px solid red; */
+            border-bottom: 1px solid white;
+            border-top: 1px solid white;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 100px;
+        }
+
+
+        .aos{
+            height: 150px;
+            width: 360px;
+            background-color: rgb(32, 39, 70);
+            border: 10px solid white;
+            opacity: 0;
+            transition: all 0.6s linear;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+
+
+
+
+        .box1_sec2 {
+            margin-top: 180px;
+        }
+
+        .box-text {
+            color: rgb(219, 140, 0);
+            font-size: large;
+        }
+
+        .active1_sec2 {
+            margin-top: 70px;
+            opacity: 1;
+        }
+
+        .box2_sec2 {
+            margin-left: 66%;
+            margin-top: 180px;
+        }
+
+        .active2_sec2 {
+            margin-top: 210px;
+            opacity: 1;
+        }
+
+        .box3_sec2 {
+            margin-top: 150px;
+            margin-left: -370px;
+        }
+
+        .active3_sec2 {
+            margin-left: 0px;
+            opacity: 1;
+        }
+
+        .box4_sec2 {
+            margin-top: 150px;
+            margin-left: 100%;
+        }
+
+        .active4_sec2 {
+            margin-left: 66%;
+            opacity: 1;
+        }
+
+        .box5_sec2 {
+            margin-top: 200px;
+            margin-left: -370px;
+        }
+
+        .active5_sec2 {
+            margin-left: 0px;
+            margin-top: 150px;
+            opacity: 1;
+        }
+
+        .box6_sec2 {
+            margin-top: 200px;
+            margin-left: 100%;
+        }
+
+        .active6_sec2 {
+            margin-left: 66%;
+            margin-top: 150px;
+            opacity: 1;
+        }
+
+        .box7_sec2 {
+            margin-top: 100px;
+            margin-left: -370px;
+        }
+
+        .active7_sec2 {
+            margin-top: 150px;
+            margin-left: 0px;
+            opacity: 1;
+        }
+
+        .box8_sec2 {
+            margin-top: 80px;
+            margin-left: 100%;
+        }
+
+
+        .active8_sec2 {
+            margin-left: 66%;
+            margin-top: 150px;
+            opacity: 1;
+        }
+
+
+
+
+        .flip1 {
+            color: white;
+            text-align: center;
+            font-weight: 100;
+            margin-top: 20px;
+        }
+
+
+
+
+        .sec3 {
+            height: 100%;
+            width: 80%;
+            /* border: 2px solid red; */
+            border-bottom: 1px solid white;
+            border-top: 1px solid white;
+            margin-top: 20px;
+            position: relative;
+            padding-bottom: 100px;
+            overflow: hidden;
+
+        }
+
+        .box9_sec3 {
+            margin-top: 130px;
+            transform: rotateX(90deg);
+            transform-origin: center;
+        }
+
+
+        .active9_sec3 {
+            transform: rotateX(0deg);
+            opacity: 1;
+        }
+
+        .box10_sec3 {
+            margin-left: 66%;
+            margin-top: 180px;
+            transform: rotateX(-180deg);
+        }
+
+        .active10_sec3 {
+            transform: rotateX(0deg);
+            opacity: 1;
+        }
+
+        .box11_sec3 {
+            margin-top: 130px;
+            opacity: 0;
+            transform: rotateY(180deg);
+            transform-origin: center;
+        }
+
+        .active11_sec3 {
+            transform: rotateY(0deg);
+            opacity: 1;
+        }
+
+        .box12_sec3 {
+            margin-left: 66%;
+            margin-top: 180px;
+            transform: rotateY(-180deg);
+        }
+
+        .active12_sec3 {
+            transform: rotateY(0deg);
+            opacity: 1;
+        }
+
+
+
+
+        .zoom1 {
+            color: white;
+            text-align: center;
+            font-weight: 100;
+            margin-top: 20px;
+        }
+
+
+
+
+
+
+        .sec4 {
+            height: 100%;
+            width: 80%;
+            /* border: 2px solid red; */
+            border-bottom: 1px solid white;
+            border-top: 1px solid white;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 100px;
+        }
+
+        .box13_sec4 {
+            margin-top: 150px;
+            transform: scale(0.5);
+        }
+
+        .active13_sec4 {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .box14_sec4 {
+            margin-left: 66%;
+            margin-top: 180px;
+            transform: scale(0.5);
+        }
+
+        .active14_sec4 {
+            margin-top: 70px;
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .box15_sec4 {
+            /* margin-left: 66%; */
+            margin-top: 150px;
+            transform: scale(0.5);
+        }
+
+        .active15_sec4 {
+            transform: scale(1);
+            margin-top: 190px;
+            opacity: 1;
+        }
+
+        .box16_sec4 {
+            margin-top: 150px;
+            margin-left: 100%;
+            transform: scale(0.5);
+        }
+
+        .active16_sec4 {
+            transform: scale(1);
+            margin-left: 66%;
+            opacity: 1;
+        }
+
+        .box17_sec4 {
+            margin-top: 140px;
+            margin-left: -370px;
+            transform: scale(0.5);
+        }
+
+        .active17_sec4 {
+            transform: scale(1);
+            margin-left: 0px;
+            opacity: 1;
+        }
+
+        .box18_sec4 {
+            margin-top: 140px;
+            margin-left: 66%;
+            transform: scale(1.2);
+        }
+
+        .active18_sec4 {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .box19_sec4 {
+            margin-top: 180px;
+            transform: scale(1.2);
+        }
+
+        .active19_sec4 {
+            margin-top: 70px;
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .box20_sec4 {
+            margin-left: 66%;
+            margin-top: 150px;
+            transform: scale(1.2);
+        }
+
+        .active20_sec4 {
+            transform: scale(1);
+            margin-top: 190px;
+            opacity: 1;
+        }
+
+        .box21_sec4 {
+            margin-top: 140px;
+            margin-left: -370px;
+            transform: scale(1.2);
+        }
+
+        .active21_sec4 {
+            transform: scale(1);
+            margin-left: 0px;
+            opacity: 1;
+        }
+
+        .box22_sec4 {
+            margin-top: 150px;
+            margin-left: 100%;
+            transform: scale(1.2);
+        }
+
+        .active22_sec4 {
+            transform: scale(1);
+            margin-left: 66%;
+            opacity: 1;
+        }
+
+
+        .diff_set_exp_1 {
+            color: white;
+            text-align: center;
+            font-weight: 100;
+            margin-top: 20px;
+        }
+
+        .sec5 {
+            height: 100%;
+            width: 80%;
+            border: 2px solid red;
+            /* border-bottom: 1px solid white;
+            border-top: 1px solid white; */
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 100px;
+        }
+
+        .box23_sec5 {
+            margin-top: 180px;
+            opacity: 0;
+        }
+
+        .active23_sec5 {
+            margin-top: 70px;
+            opacity: 1;
+        }
+
+        .box24_sec5 {
+            margin-left: 66%;
+            margin-top: 180px;
+        }
+
+        .active24_sec5 {
+            margin-top: 210px;
+            opacity: 1;
+        }
+
+        .box25_sec5{
+            margin-top: 210;
+            margin-left: 180px;
+
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="main_section">
+        <div class="logo_div"></div>
+        <!-- <div class="blue_div">
+        </div> -->
+        <div class="sec1">1
+            <h1 class="heading1_sec1">AOS</h1>
+            <h2 class="heading2_sec1">Animate On Scroll Library</h2>
+            <p class="para1_sec1">SCROLL DOWN</p>
+            <!-- <p class="para2_sec1"></p> -->
+            <i class="fa-solid fa-chevron-down para2_sec1"></i>
+        </div>
+
+        <!-- ////////////fade//////////////// -->
+        <h1 class="fade1">FADE</h1>
+
+        <div class="sec2">2
+            <div class="box1_sec2 aos">
+                <p class="box-text">"fade-up"</p>
+            </div>
+            <div class="box2_sec2 aos">
+                <p class=" box-text">"fade-down"</p>
+            </div>
+            <div class="box3_sec2 aos">
+                <p class="box-text">"fade-right"</p>
+            </div>
+            <div class="box4_sec2 aos">
+                <p class="box-text">"fade-left"</p>
+            </div>
+            <div class="box5_sec2 aos">
+                <p class="box-text">"fade-right-up"</p>
+            </div>
+            <div class="box6_sec2 aos">
+                <p class=" box-text">"fade-left-up"</p>
+            </div>
+            <div class="box7_sec2 aos">
+                <p class="box-text">"fade-right-down"</p>
+            </div>
+            <div class="box8_sec2 aos">
+                <p class="box-text">"fade-left-down"</p>
+            </div>
+        </div>
+        <!-- ////////////flip//////////////// -->
+        <h1 class="flip1">FLIP</h1>
+
+        <div class="sec3">3
+            <div class="box9_sec3 aos">
+                <p class="box-text">"flip-left"</p>
+            </div>
+            <div class="box10_sec3 aos">
+                <p class="box-text">"flip-right"</p>
+            </div>
+            <div class="box11_sec3 aos">
+                <p class="box-text">"flip-up"</p>
+            </div>
+            <div class="box12_sec3 aos">
+                <p class="box-text">"flip-down"</p>
+            </div>
+        </div>
+
+        <!-- ////////////zoom//////////////// -->
+        <h1 class="zoom1">ZOOM</h1>
+
+        <div class="sec4">4
+            <div class="box13_sec4 aos">
+                <p class="box-text">"zoom-in"</p>
+            </div>
+            <div class="box14_sec4 aos">
+                <p class="box-text">"zoom-in-up"</p>
+            </div>
+            <div class="box15_sec4 aos">
+                <p class="box-text">"zoom-in-down"</p>
+            </div>
+            <div class="box16_sec4 aos">
+                <p class="box-text">"zoom-in-left"</p>
+            </div>
+            <div class="box17_sec4 aos">
+                <p class="box-text">"zoom-in-right"</p>
+            </div>
+            <div class="box18_sec4 aos">
+                <p class="box-text">"zoom-out"</p>
+            </div>
+            <div class="box19_sec4 aos">
+                <p class="box-text">"zoom-out-down"</p>
+            </div>
+            <div class="box20_sec4 aos">
+                <p class="box-text">"zoom-out-up"</p>
+            </div>
+            <div class="box21_sec4 aos">
+                <p class="box-text">"zoom-out-right"</p>
+            </div>
+            <div class="box22_sec4 aos">
+                <p class="box-text">"zoom-out-left"</p>
+            </div>
+        </div>
+
+        <!-- ////////////diff_set_exp_1//////////////// -->
+        <!-- <h1 class="diff_set_exp_1">DIFFERENT SETTINGS EXAMPLES</h1>
+
+        <div class="sec5">5
+            <div class="box23_sec5 aos">
+                <p class="box-text">"fade-up(Diff_set)"</p>
+            </div>
+            <div class="box24_sec5 aos">
+                <p class="box-text">"fade-down(Diff_set)"</p>
+            </div>
+            <div class="box25_sec5 aos">
+                <p class="box-text">"fade-down(Diff_set)"</p>
+            </div>
+        </div>
+
+    </div> -->
+
+
+    <script>
+
+        // sec_2//
+        // box1
+        let box1 = document.querySelector(".box1_sec2")
+        window.addEventListener("scroll", function () {
+            if (scrollY > 360) {
+                box1.classList.add("active1_sec2")
+            } else {
+                box1.classList.remove("active1_sec2")
+            }
+            
+            
+        // box2
+        let box2 = document.querySelector(".box2_sec2")
+            if (scrollY > 680) {
+                console.log(this.scrollY);
+                box2.classList.add("active2_sec2")
+            } else {
+                box2.classList.remove("active2_sec2")
+            }
+
+
+        // box3
+        let box3 = document.querySelector(".box3_sec2")
+            if (scrollY > 995) {
+                console.log(this.scrollY);
+                box3.classList.add("active3_sec2")
+            } else {
+                box3.classList.remove("active3_sec2")
+            }
+
+
+        // box4
+        let box4 = document.querySelector(".box4_sec2")
+            if (scrollY > 1295) {
+                console.log(this.scrollY);
+                box4.classList.add("active4_sec2")
+            } else {
+                box4.classList.remove("active4_sec2")
+            }
+
+
+        // box5
+        let box5 = document.querySelector(".box5_sec2")
+            if (scrollY > 1620) {
+                console.log(this.scrollY);
+                box5.classList.add("active5_sec2")
+            } else {
+                box5.classList.remove("active5_sec2")
+            }
+
+
+        // box6
+        let box6 = document.querySelector(".box6_sec2")
+            if (scrollY > 1895) {
+                console.log(this.scrollY);
+                box6.classList.add("active6_sec2")
+            } else {
+                box6.classList.remove("active6_sec2")
+            }
+        
+        
+        // box7
+        let box7 = document.querySelector(".box7_sec2")
+            if (scrollY > 2145) {
+                // console.log(this.scrollY);
+                box7.classList.add("active7_sec2")
+            } else {
+                box7.classList.remove("active7_sec2")
+            }
+
+
+
+        // box8
+        let box8 = document.querySelector(".box8_sec2")
+            if (scrollY > 2425) {
+                // console.log(this.scrollY);
+                box8.classList.add("active8_sec2")
+            } else {
+                box8.classList.remove("active8_sec2")
+            }
+        
+        
+        
+        // sec3//
+        // box9
+        let box9 = document.querySelector(".box9_sec3")
+            if (scrollY > 2880) {
+                // console.log(this.scrollY);
+                box9.classList.add("active9_sec3")
+            } else {
+                box9.classList.remove("active9_sec3")
+            }
+        
+        
+        // box10
+        let box10 = document.querySelector(".box10_sec3")
+            // console.log(e , "working");
+            if (scrollY > 3212) {
+                console.log(this.scrollY);
+                box10.classList.add("active10_sec3")
+            } else {
+                box10.classList.remove("active10_sec3")
+            }
+        
+        // box11
+        let box11_sec3 = document.querySelector(".box11_sec3")
+            // console.log(e , "working");
+            if (scrollY > 3501) {
+                console.log(this.scrollY);
+                box11_sec3.classList.add("active11_sec3")
+            } else {
+                box11_sec3.classList.remove("active11_sec3")
+            }
+
+
+        // box12
+        let box12_sec3 = document.querySelector(".box12_sec3")
+            // console.log(e , "working");
+            if (scrollY > 3802) {
+                console.log(this.scrollY);
+                box12_sec3.classList.add("active12_sec3")
+            } else {
+                box12_sec3.classList.remove("active12_sec3")
+            }
+
+
+        // sec4
+        // box13
+        let box13_sec4 = document.querySelector(".box13_sec4")
+            // console.log(e , "working");
+            if (scrollY > 4240) {
+                console.log(this.scrollY);
+                box13_sec4.classList.add("active13_sec4")
+            } else {
+                box13_sec4.classList.remove("active13_sec4")
+            }
+
+        // box14
+        let box14_sec4 = document.querySelector(".box14_sec4")
+            // console.log(e , "working");
+            if (scrollY > 4510) {
+                console.log(this.scrollY);
+                box14_sec4.classList.add("active14_sec4")
+            } else {
+                box14_sec4.classList.remove("active14_sec4")
+            }
+        // box15
+        let box15_sec4 = document.querySelector(".box15_sec4")
+            // console.log(e , "working");
+            if (scrollY > 4700) {
+                console.log(this.scrollY);
+                box15_sec4.classList.add("active15_sec4")
+            } else {
+                box15_sec4.classList.remove("active15_sec4")
+            }
+
+        // box16
+        let box16_sec4 = document.querySelector(".box16_sec4")
+            // console.log(e , "working");
+            if (scrollY > 5030) {
+                console.log(this.scrollY);
+                box16_sec4.classList.add("active16_sec4")
+            } else {
+                box16_sec4.classList.remove("active16_sec4")
+            }
+
+
+        // box17
+        let box17_sec4 = document.querySelector(".box17_sec4")
+            // console.log(e , "working");
+            if (scrollY > 5310) {
+                console.log(this.scrollY);
+                box17_sec4.classList.add("active17_sec4")
+            } else {
+                box17_sec4.classList.remove("active17_sec4")
+            }
+
+        // box18
+        let box18_sec4 = document.querySelector(".box18_sec4")
+            // console.log(e , "working");
+            if (scrollY > 5590) {
+                console.log(this.scrollY);
+                box18_sec4.classList.add("active18_sec4")
+            } else {
+                box18_sec4.classList.remove("active18_sec4")
+            }
+
+
+        // box19
+        let box19_sec4 = document.querySelector(".box19_sec4")
+            // console.log(e , "working");
+            if (scrollY > 5900) {
+                console.log(this.scrollY);
+                box19_sec4.classList.add("active19_sec4")
+            } else {
+                box19_sec4.classList.remove("active19_sec4")
+            }
+
+
+        // box20
+        let box20_sec4 = document.querySelector(".box20_sec4")
+            // console.log(e , "working");
+            if (scrollY > 6133) {
+                console.log(this.scrollY);
+                box20_sec4.classList.add("active20_sec4")
+            } else {
+                box20_sec4.classList.remove("active20_sec4")
+            }
+
+
+        // box21
+        let box21_sec4 = document.querySelector(".box21_sec4")
+            // console.log(e , "working");
+            if (scrollY > 6335) {
+                console.log(this.scrollY);
+                box21_sec4.classList.add("active21_sec4")
+            } else {
+                box21_sec4.classList.remove("active21_sec4")
+            }
+
+        // box22
+        let box22_sec4 = document.querySelector(".box22_sec4")
+            // console.log(e , "working");
+            if (scrollY > 6700) {
+                console.log(this.scrollY);
+                box22_sec4.classList.add("active22_sec4")
+            } else {
+                box22_sec4.classList.remove("active22_sec4")
+            }
+
+
+        // sec5//
+        // box23
+        let box23_sec5 = document.querySelector(".box23_sec5")
+            // console.log(e , "working");
+            if (scrollY > 7005) {
+                console.log(this.scrollY);
+                box23_sec5.classList.add("active23_sec5")
+            } else {
+                box23_sec5.classList.remove("active23_sec5")
+            }
+
+
+        // box24
+        let box24_sec5 = document.querySelector(".box24_sec5")
+            if (scrollY > 7325) {
+                console.log(this.scrollY);
+                box24_sec5.classList.add("active24_sec5")
+            } else {
+                box24_sec5.classList.remove("active24_sec5")
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>
